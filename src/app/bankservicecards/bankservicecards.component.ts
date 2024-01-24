@@ -5,13 +5,13 @@ import { DesigncardsComponent } from '../designcards/designcards.component';
 import { SelectCardComponent } from '../select-card/select-card.component';
 import { DoublecardsComponent } from '../doublecards/doublecards.component';
 import { FaqsComponent } from '../faqs/faqs.component';
-import { BanknavigateComponent } from '../banknavigate/banknavigate.component';
+// import { BanknavigateComponent } from '../banknavigate/banknavigate.component';
+// import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-bankservicecards',
   standalone: true,
   imports: [
-    BanknavigateComponent,
     MainscardComponent,
     OrdernewcardComponent,
     DesigncardsComponent,

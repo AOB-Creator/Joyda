@@ -1,0 +1,64 @@
+<div class="valuta">
+  <div class="container">
+    <div class="whichone">
+      <div class="v-kakoy-valyute">
+        <h1 class="title">В какой валюте желаешь открыть?</h1>
+        <div class="radiobtns">
+          <div class="radio">
+            <p-radioButton
+              name="pizza"
+              value="UZS"
+              [(ngModel)]="ingredient"
+              inputId="ingredient1"
+            ></p-radioButton>
+            <label for="ingredient1">UZS</label>
+          </div>
+          <div class="radio">
+            <p-radioButton
+              name="pizza"
+              value="USD"
+              [(ngModel)]="ingredient"
+              (onClick)="nochoise()"
+              inputId="ingredient2"
+            ></p-radioButton>
+            <label for="ingredient2">USD</label>
+          </div>
+        </div>
+      </div>
+      @if (ingredient=="UZS") {
+      <div class="threechoise">
+        <div class="radiobtns">
+          <div class="radio">
+            <p-radioButton
+              name="pizza"
+              value="ishonch"
+              [(ngModel)]="threechoise"
+              inputId="threechoise1"
+            ></p-radioButton>
+            <label for="threechoise1">Ishonch</label>
+          </div>
+          <div class="radio">
+            <p-radioButton
+              name="pizza"
+              value="yuksalish"
+              [(ngModel)]="threechoise"
+              inputId="threechoise2"
+            ></p-radioButton>
+            <label for="threechoise2">Yuksalish</label>
+          </div>
+          <div class="radio">
+            <p-radioButton
+              name="pizza"
+              value="classic"
+              [(ngModel)]="threechoise"
+              inputId="threechoise3"
+            ></p-radioButton>
+            <label for="threechoise3">Classic</label>
+          </div>
+        </div>
+      </div>
+      }
+      <app-moneyworks [typedepo]="threechoise"></app-moneyworks>
+    </div>
+  </div>
+</div>

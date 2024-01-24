@@ -45,7 +45,7 @@
               flex: 1;
               padding: 10px 20px;
 
-              .title {
+              .titletop {
                 font-size: 23px;
                 font-weight: 500;
                 line-height: 24px;
@@ -86,7 +86,7 @@
     width: 60%;
     height: auto !important;
   }
-  .title {
+  .titletop {
     font-size: 20px !important;
   }
   .btns {
@@ -103,7 +103,7 @@
     width: 80% !important;
     height: auto !important;
   }
-  .title {
+  .titletop {
     font-size: 20px !important;
   }
   .btns {
@@ -117,12 +117,27 @@
   }
 }
 @media (max-width: 600px) and (min-width: 301px) {
+  .selection {
+    .title {
+      font-size: 25px !important;
+    }
+  }
+  .titletop {
+    font-size: 10px !important;
+  }
   .inbox {
+    padding: 10px 0px !important;
     width: 100% !important;
     height: auto !important;
   }
   .topselect {
     height: auto !important;
+    .left {
+      flex: 2 !important;
+    }
+    .right {
+      flex: 1 !important;
+    }
   }
   .right {
     padding: 0 !important;
@@ -135,11 +150,9 @@
       padding: 0px 0 !important;
     }
   }
-  .title {
-    font-size: 10px !important;
-  }
+
   .btns {
-    padding: 0px 0 !important;
+    padding: 13px 0 !important;
     button {
       padding: 13px 10px !important;
       margin-right: 10px;

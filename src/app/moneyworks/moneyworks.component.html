@@ -1,0 +1,22 @@
+<div class="moneyworks">
+  @if (typedepo=="") {
+  <div class="workingmoney">
+    <h1 class="title">Деньги должны работать!</h1>
+    <p class="descr">Не позволяй деньгам отдыхать</p>
+  </div>
+  } @else if (typedepo!="") {
+  <div class="workingmoney">
+    <h1 class="title">JOYDA предлагает тебе</h1>
+    <p class="descr">{{ typedepo.toLocaleUpperCase() }}</p>
+    @for (item of detailedData; track $index) { @if
+    (item.deposit_type==typedepo) {
+    <div class="deadline">Срок хранения {{ item.percentage }} Oy</div>
+    <button [routerLink]="'../' + item.link" class="green_btn">
+      Подробнее
+    </button>
+    } }
+  </div>
+  }
+
+  <img class="deposit" src="../../assets/images/depositebank.png" alt="" />
+</div>

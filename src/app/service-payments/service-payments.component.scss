@@ -1,3 +1,15 @@
 .payments {
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 30px;
+    color: rgb(49, 49, 49);
+  }
+  img {
+    width: 300px;
+  }
 }

@@ -1,0 +1,51 @@
+@use "../../styles.scss" as *;
+
+.moneyworks {
+  height: auto;
+  margin-top: 20px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.568);
+  padding: 30px 35px;
+  border-radius: 20px;
+  //   background: url(https://joyda.uz/offered-deposite-bg.dc308776049608ce52db.png);
+  //   background-position: center;
+  //   background-size: cover;
+  position: relative;
+  .deposit {
+    position: absolute;
+    height: 100%;
+    right: 10%;
+    top: 0;
+  }
+  .workingmoney {
+    .title {
+      font-size: 40px;
+      color: $colortext;
+    }
+    .descr {
+      font-size: 20px;
+      padding-top: 20px;
+    }
+    .deadline {
+      padding: 5px 0;
+    }
+    button {
+      margin-top: 10px;
+    }
+  }
+}
+@media (max-width: 900px) and (min-width: 721px) {
+  .deposit {
+    right: -5% !important;
+  }
+}
+
+@media (max-width: 700px) and (min-width: 221px) {
+  .deposit {
+    display: none;
+    right: -5% !important;
+  }
+  .title {
+    font-size: 25px !important;
+  }
+}
