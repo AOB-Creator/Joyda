@@ -99,8 +99,10 @@
   }
   .areaselect {
     display: flex;
+    flex-direction: column;
     .leftarea {
       flex: 1 !important;
+
       label {
         font-size: 13px !important;
         padding: 20px 10px !important;
