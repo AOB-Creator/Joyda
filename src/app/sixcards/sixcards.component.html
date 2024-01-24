@@ -1,0 +1,26 @@
+<div class="sixcards">
+  @for (item of datacards; track $index) {
+  <div class="card-6" [routerLink]="item.link_url">
+    <div class="img-six">
+      <img [src]="item.image_url" alt="" />
+    </div>
+    <div class="cards_text">
+      <div class="title">
+        @if (langstate.selectedLang=='uz') {
+        <h4>{{ item.titlecard[0] }}</h4>
+        }@else {
+        <h4>{{ item.titlecard[1] }}</h4>
+        }
+      </div>
+
+      <div class="serves">
+        @if (langstate.selectedLang=='uz') {
+        <p>{{ item.description_card[0] }}</p>
+        }@else {
+        <p>{{ item.description_card[1] }}</p>
+        }
+      </div>
+    </div>
+  </div>
+  }
+</div>

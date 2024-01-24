@@ -1,0 +1,160 @@
+@use "../../styles.scss" as *;
+
+.mobile-paltform {
+  padding: 40px 0;
+  background-color: $background-color;
+  .platform {
+    height: 50vh;
+    background-color: $green;
+    background-image: url(https://joyda.uz/assets/img/banners/joyda-banner-bg.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    h2 {
+      color: $white-1;
+      font-size: 40px;
+      padding: 15px 0;
+    }
+    p {
+      font-size: 16px;
+      color: $white-1;
+      padding: 10px 0;
+      font-weight: 400;
+    }
+    .img {
+      margin: 10px 0;
+      display: inline-block;
+      img {
+        width: 130px;
+        margin-right: 10px;
+      }
+      position: relative;
+      .qrcode {
+        position: absolute;
+        bottom: 0;
+        right: -80%;
+        display: flex;
+        align-items: center;
+        img {
+          width: 80px;
+        }
+        p {
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+    }
+    .imagephone {
+      position: absolute;
+      height: 90%;
+      bottom: 0;
+      right: -10%;
+    }
+  }
+}
+
+.container-min {
+  width: 85%;
+  padding: 30px 0;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (max-width: 920px) and (min-width: 651px) {
+  .platform {
+    height: auto !important;
+    overflow: hidden;
+  }
+  .img {
+    img {
+    }
+    .qrcode {
+      position: initial !important;
+      padding: 10px 0;
+
+      img {
+        width: 70px;
+      }
+    }
+  }
+  .imagephone {
+    position: absolute;
+    height: 80% !important;
+    bottom: 0;
+    right: -30% !important;
+  }
+}
+@media (max-width: 650px) and (min-width: 450px) {
+  .platform {
+    height: auto !important;
+    overflow: hidden;
+  }
+  .img {
+    img {
+    }
+    .qrcode {
+      position: initial !important;
+      padding: 10px 0;
+
+      img {
+        width: 70px;
+      }
+    }
+  }
+  .imagephone {
+    position: absolute;
+    height: 80% !important;
+    bottom: 0;
+    right: -30% !important;
+    display: none;
+  }
+}
+@media (max-width: 650px) and (min-width: 451px) {
+  .platform {
+    height: auto !important;
+    overflow: hidden;
+  }
+  .img {
+    img {
+    }
+    .qrcode {
+      position: initial !important;
+      padding: 10px 0;
+    }
+  }
+  .imagephone {
+    position: absolute;
+    height: 80% !important;
+    right: -30% !important;
+    display: none;
+  }
+}
+@media (max-width: 450px) and (min-width: 250px) {
+  .platform {
+    height: auto !important;
+    overflow: hidden;
+    h2 {
+      font-size: 25px !important;
+    }
+  }
+  .img {
+    img {
+    }
+    .qrcode {
+      position: initial !important;
+      padding: 10px 0;
+
+      img {
+        width: 70px;
+      }
+    }
+  }
+  .imagephone {
+    position: absolute;
+    height: 80% !important;
+    bottom: 0;
+    right: -30% !important;
+    display: none;
+  }
+}

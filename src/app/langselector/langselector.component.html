@@ -1,0 +1,38 @@
+<div class="langselector">
+  @if (langselector=='uz') {
+  <img
+    class="image"
+    (click)="showSelector()"
+    src="../../assets/flags/flag-cn-svgrepo-com.svg"
+    alt=""
+  />
+  } @else if(langselector=='ru'){
+  <!-- <img class="image" src="../../assets/flags/flag-ru-svgrepo-com.svg" alt="" /> -->
+  <img
+    (click)="showSelector()"
+    src="https://flagicons.lipis.dev/flags/4x3/uz.svg"
+    alt=""
+  />
+  } @if (!showItem) {
+  <div class="options">
+    <input type="radio" name="lang" id="ru" (input)="changeRadio1()" />
+    <label for="ru">
+      <img
+        class="image"
+        src="../../assets/flags/flag-cn-svgrepo-com.svg"
+        alt=""
+      />
+      <p>Chinese</p>
+    </label>
+    <input type="radio" name="lang" id="uz" (input)="changeRadio2()" />
+    <label for="uz">
+      <img
+        class="image"
+        src="../../assets/flags/flag-ru-svgrepo-com.svg"
+        alt=""
+      />
+      <p>Russian</p>
+    </label>
+  </div>
+  }
+</div>

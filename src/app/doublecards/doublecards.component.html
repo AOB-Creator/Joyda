@@ -1,0 +1,37 @@
+<div class="doublecards">
+  <div class="container">
+    <div class="doubles">
+      <input
+        type="radio"
+        name="choose"
+        (input)="changeCard1($event)"
+        id="check1"
+        checked
+      />
+      <label for="check1">{{ firstbtn }}</label>
+
+      <input
+        type="radio"
+        name="choose"
+        (input)="changeCard2($event)"
+        id="check2"
+      />
+      <label for="check2">{{ secondbtn }}</label>
+      <div class="exposure">
+        @if (state=='first') {
+        <ul class="one">
+          @for (item of fisrtList; track $index) {
+          <li>{{ item.text }}</li>
+          }
+        </ul>
+        }@else if (state=='second') {
+        <ul class="two">
+          @for (item of secondList; track $index) {
+          <li>{{ item.text }}</li>
+          }
+        </ul>
+        }
+      </div>
+    </div>
+  </div>
+</div>

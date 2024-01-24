@@ -1,0 +1,36 @@
+<div class="select-cards">
+  <div class="container">
+    <div class="selection">
+      <h2 class="title">{{ title }}</h2>
+      <div class="cards_selection">
+        @for (item of datacards; track $index) {
+        <div class="card-s">
+          <div class="inbox">
+            <div class="topselect">
+              <div class="left" ngTilt>
+                <img [src]="item.image_url" alt="" />
+              </div>
+              <div class="right">
+                <div>
+                  <h1 class="title">{{ item.top_text }}</h1>
+                  <p class="text">{{ item.descr_text }}</p>
+                </div>
+                <div class="topmarg">
+                  <h1 class="title">{{ item.price }}</h1>
+                  <p class="text">Karta chiqarish</p>
+                </div>
+              </div>
+            </div>
+            <div class="btns">
+              <button>Kartaga buyurtma berish</button>
+              <a [href]="item.url_info">
+                <button>Karta haqida batafsil</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

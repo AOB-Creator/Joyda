@@ -1,0 +1,26 @@
+@use "../../styles.scss" as *;
+
+.banknavigation {
+  border-top: 1px solid $grey-2;
+  border-bottom: 1px solid $grey-2;
+  .bank {
+    height: auto;
+    display: flex;
+    align-items: center;
+    .routes {
+      display: flex;
+      align-items: center;
+      padding: 15px 15px;
+      height: 7vh;
+      color: $colortext;
+      padding: 10px 15px;
+      margin-right: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      border-bottom: 2px solid rgba(255, 255, 255, 0);
+    }
+    .active {
+      border-bottom: 2px solid #f361ac;
+    }
+  }
+}

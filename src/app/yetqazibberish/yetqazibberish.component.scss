@@ -1,0 +1,88 @@
+@use "../../styles.scss" as *;
+
+@mixin DF($ai: center, $jc: center, $fd: row) {
+  display: flex;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-direction: $fd;
+}
+
+.fullpage {
+  background-color: $background-color;
+  .delivery {
+    height: auto;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    .card {
+      &:last-child {
+        border-right: 0px solid #e8e8e8 !important;
+      }
+      border-right: 2px solid #e8e8e8c2;
+      height: 100px;
+      display: flex;
+      .img {
+        flex: 1;
+        height: 100%;
+        @include DF();
+        img {
+          width: 90%;
+        }
+      }
+      .text {
+        flex: 4;
+        padding: 0px 10px;
+        @include DF(flex-start, center, column);
+        h4 {
+          font-size: 20px;
+          font-weight: 400;
+        }
+        p {
+          font-size: 13px;
+          color: #726f6f;
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 930px) and (min-width: 801px) {
+  .card {
+    .text {
+      h4 {
+        font-size: 13px !important;
+      }
+      p {
+        font-size: 11px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) and (min-width: 501px) {
+  .delivery {
+    grid-template-columns: repeat(2, 1fr) !important;
+    row-gap: 10px !important;
+    .card {
+      border-right: 0px solid #e8e8e8 !important;
+    }
+  }
+}
+
+@media (max-width: 500px) and (min-width: 200px) {
+  .delivery {
+    grid-template-columns: repeat(1, 1fr) !important;
+    row-gap: 10px !important;
+    .card {
+      border-right: 0px solid #e8e8e8 !important;
+      .img {
+        flex: 2 !important;
+        img {
+          width: 60% !important;
+        }
+      }
+    }
+  }
+}

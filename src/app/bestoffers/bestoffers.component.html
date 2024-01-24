@@ -1,0 +1,56 @@
+<div class="bestoffers">
+  <div class="container">
+    <div class="offers-page">
+      <h3 class="title">{{ title }}</h3>
+      <div class="cards-offers">
+        <div class="left">
+          <img [src]="ProductCards[0].image_url" class="bgimg" alt="" />
+          <div class="upper">
+            <div class="top">
+              <h1>{{ ProductCards[0].title[0] }}</h1>
+              <p>{{ ProductCards[0].description[0] }}</p>
+            </div>
+            <div class="bottom">
+              <button>{{ ProductCards[0].btns[0] }}</button> <br />
+              <button [routerLink]="ProductCards[0].links[0]">
+                {{ ProductCards[0].btns[1] }}
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="cardtp">
+            <img [src]="ProductCards[1].image_url" class="bgimg" alt="" />
+            <div class="upper">
+              <div class="top">
+                <h1>{{ ProductCards[1].title[0] }}</h1>
+                <p>{{ ProductCards[1].description[0] }}</p>
+              </div>
+              <div class="bottom">
+                <button>{{ ProductCards[1].btns[0] }}</button>
+                <button [routerLink]="ProductCards[1].links[0]">
+                  {{ ProductCards[1].btns[1] }}
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="cardtp">
+            <img [src]="ProductCards[2].image_url" class="bgimg" alt="" />
+            <div class="upper">
+              <div class="top">
+                <h1>{{ ProductCards[2].title[0] }}</h1>
+                <p>{{ ProductCards[2].description[0] }}</p>
+              </div>
+              <div class="bottom">
+                <button>{{ ProductCards[2].btns[0] }}</button>
+                <button [routerLink]="ProductCards[2].links[0]">
+                  {{ ProductCards[2].btns[1] }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

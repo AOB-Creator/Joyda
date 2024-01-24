@@ -1,0 +1,17 @@
+<div class="fullpage">
+  <div class="container">
+    <div class="delivery">
+      @for (item of data_info; track $index) {
+      <div class="card">
+        <div class="img">
+          <img [src]="item.image_url" alt="" />
+        </div>
+        <div class="text">
+          <h4>{{ item.title_card }}</h4>
+          <p>{{ item.description_card }}</p>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

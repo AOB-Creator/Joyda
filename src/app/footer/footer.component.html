@@ -1,0 +1,67 @@
+<div class="footer">
+  <div class="container">
+    <div class="top_footer">
+      <ul class="tpfooter">
+        <li>Bosh sahifa</li>
+        <li>Magazin</li>
+        <li>Mening bankim</li>
+        <li>Hamkorlarga</li>
+      </ul>
+      <ul class="tpfooter">
+        <li>Bo'lib to'lash sharti</li>
+        <li>Oferta</li>
+        <li>Yetkazib berish</li>
+      </ul>
+      <ul class="tpfooter contact">
+        <li class="infoservice">
+          Ma'lumot va axborot xizmati: <br />
+          Ish vaqti: 24/7
+        </li>
+        <li class="phone">+998 71 200-43-43</li>
+        <li class="phone">1180</li>
+      </ul>
+      <div class="tpfooter">
+        <div class="img1">
+          <img [src]="footinfo[0].image_url" alt="" />
+        </div>
+        <div class="img2">
+          <img
+            [src]="footinfo[1].image_url"
+            [routerLink]="footinfo[1].url_link"
+            alt=""
+          />
+          <img
+            [src]="footinfo[2].image_url"
+            [routerLink]="footinfo[2].url_link"
+            alt=""
+          />
+        </div>
+        <p class="socialnet">Biz ijtimoiy tarmoqlarda:</p>
+        <ul class="socials">
+          @for (item of socialNetworks; track $index) {
+          <li>
+            <a [href]="item.lisnk_url">
+              <img [src]="item.image_url" alt="" />
+            </a>
+          </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="bottom_footer">
+    <div class="container">
+      <div class="botfoot">
+        <div class="left">
+          © 2022 АКБ "Узпромстройбанк" <br />
+          Лицензия #17, 27.06.2009
+        </div>
+        <div class="middle">
+          При использовании материалов сайта <br />
+          ссылка на веб-сайт www.joyda.uz обязательна
+        </div>
+        <div class="right"></div>
+      </div>
+    </div>
+  </div>
+</div>

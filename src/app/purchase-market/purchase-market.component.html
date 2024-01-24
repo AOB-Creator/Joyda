@@ -1,0 +1,15 @@
+<div class="purchase">
+  <div class="container">
+    <div class="purchase_cards">
+      <h3>{{ titlepage }}</h3>
+      <div class="cards">
+        @for (item of purchase_products; track $index) {
+        <div class="card" [routerLink]="item.link_url">
+          <img [src]="item.image_url" alt="" />
+          <p>{{ item.descript_text }}</p>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

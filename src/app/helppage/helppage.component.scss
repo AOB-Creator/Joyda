@@ -1,0 +1,19 @@
+@use "../../styles.scss" as *;
+
+.help {
+  padding: 30px 0;
+
+  .help-page {
+    height: auto;
+
+    h2 {
+      padding: 20px 0;
+      color: $colortext;
+      font-size: 18px;
+    }
+    .frame {
+      width: 100% !important;
+      height: 400px !important;
+    }
+  }
+}

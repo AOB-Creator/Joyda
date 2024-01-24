@@ -1,0 +1,62 @@
+@use "../../styles.scss" as *;
+
+.doublecards {
+  background-color: $background-color;
+  padding: 30px 0;
+  .doubles {
+    height: auto;
+    label {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 20px;
+      outline: none;
+      cursor: pointer;
+      color: #0a1e32;
+      font-size: 14px;
+      line-height: 1.1;
+      user-select: none;
+    }
+    input {
+      display: none;
+      &:checked + label {
+        color: $white-1;
+        background: linear-gradient(126.6deg, #0086cd -0.08%, #00b9ff 95.06%);
+        box-shadow: 0 6px 20px rgba(2, 171, 241, 0.4);
+        text-shadow: 0 2px 8px #024160;
+      }
+    }
+    .exposure {
+      padding: 20px 30px;
+      ul {
+        li {
+          font-size: 20px;
+          margin: 10px 10px;
+        }
+        &.one {
+          li {
+            list-style-position: inside;
+            list-style: square inside
+              url(https://joyda.uz/custom-list.614a17462b2c7b0a3075.svg);
+          }
+        }
+        &.two {
+          li {
+            list-style: square inside
+              url(https://joyda.uz/custom-list-li.1528ad989617ab33e187.svg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) and (min-width: 300px) {
+  .exposure {
+    padding: 20px 30px;
+    ul {
+      li {
+        font-size: 14px !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<div class="sponsors">
+  <div class="container">
+    <div class="title">{{ title }}</div>
+    <div class="pad">
+      <owl-carousel-o [options]="customOptions" class="carousel">
+        @for (item of OurPartners; track $index) {
+        <ng-template carouselSlide class="pagepadding">
+          <div class="card-slider">
+            <img [src]="item.image_url" [alt]="item.id" />
+          </div>
+        </ng-template>
+        }
+      </owl-carousel-o>
+    </div>
+  </div>
+</div>

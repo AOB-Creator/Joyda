@@ -1,0 +1,17 @@
+<div class="faqs">
+  <div class="container">
+    <div class="faqs-box">
+      <h1 class="title">{{ title }}</h1>
+      <div class="boxes">
+        @for (item of faqs; track $index) {
+        <div class="box" [routerLink]="item.link">
+          <div class="left">#</div>
+          <div class="tekst">
+            {{ item.text_plain }}
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

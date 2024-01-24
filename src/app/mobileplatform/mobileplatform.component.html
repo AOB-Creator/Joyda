@@ -1,0 +1,46 @@
+<div class="mobile-paltform">
+  <div class="container">
+    <div class="platform">
+      <div class="container-min">
+        <div class="left">
+          <h2>{{ title }}</h2>
+          @if (languageServe.selectedLang!='ru') {
+          <p>
+            Smartfoningizdagi qulay ilovadan <br />
+            foydalanib, kundalik to'lovlarni amalga oshiring
+          </p>
+          } @else {
+          <p>
+            Совершай повседневные платежи <br />
+            используя удобное приложение в смартфоне
+          </p>
+          }
+          <div class="img">
+            @for (item of data_image; track $index) {
+            <img [src]="item.image_url" alt="" />
+            }
+            <div class="qrcode">
+              <img src="https://joyda.uz/assets/img/qr.svg" alt="" />
+              @if (languageServe.selectedLang!='ru') {
+              <p>
+                QR kodini <br />
+                skanerlang
+              </p>
+              }@else {
+              <p>
+                Отсканируй <br />
+                QR-код
+              </p>
+              }
+            </div>
+          </div>
+        </div>
+        <img
+          src="https://joyda.uz/assets/img/iPhone-XS-Front.png"
+          class="imagephone"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</div>

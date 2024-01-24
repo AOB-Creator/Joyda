@@ -1,0 +1,54 @@
+<div class="navbar">
+  <div class="container">
+    <div class="navigation">
+      <ul class="left">
+        <li
+          routerLink="/marketplace/main"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Magazin
+        </li>
+        <li
+          routerLink="/bank-services/payments"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Bank xizmatlari
+        </li>
+        <li
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Mening bankim
+        </li>
+        <li
+          routerLink="/partners"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Hamkorlarga
+        </li>
+        <li
+          routerLink="/help"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Yordam
+        </li>
+      </ul>
+      <div class="right">
+        <app-langselector></app-langselector>
+        <div class="location">
+          <p>Nukus shahri</p>
+          <i class="fa-solid fa-location-dot" id="iconloca"></i>
+        </div>
+        <div class="profile">
+          <p>Profile</p>
+          <i class="fa-solid fa-user" id="user"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

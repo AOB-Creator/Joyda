@@ -1,0 +1,40 @@
+<div class="test">
+  <div class="container">
+    <div class="test-page">
+      <h1>Component {{ inputText }}</h1>
+      <p>{{ bookers }} is located</p>
+      <ng-template>
+        <h2>Hello world</h2>
+      </ng-template>
+      <ng-content></ng-content>
+      <input type="text" #refInput />
+      <button>get clicked</button>
+      <h1>Sticker Wolrd {{ text }}</h1>
+      @if(texture=='ok'){
+      <h1>Hello world OK</h1>
+      }@else if(texture=='bad'){
+      <h1>Hello world BAD</h1>
+      }@else if(texture != ''){
+      <h1>Hello World {{ texture }}</h1>
+      }
+
+      <div class="boxes">
+        @for (item of thisdata; track $index) { @if(item%2==0){
+        <span>⭐</span>
+        }@else if(item%11== 0){
+        <span>😘</span>
+        }@else{
+        <span>❤️</span>
+        } }
+      </div>
+
+      <app-about></app-about>
+
+      @switch (texture) { @case('ok'){
+      <h1>Hello world OK</h1>
+      } @case('sexy'){
+      <h1>Hello world SEXY</h1>
+      } }
+    </div>
+  </div>
+</div>

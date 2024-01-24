@@ -1,0 +1,19 @@
+<div class="about">
+  <div class="container-page">
+    <div class="about-page">
+      <input type="text" (input)="changer($event)" />
+      <h1>{{ condition }}</h1>
+      @if(condition=='ok'){
+      <h1>OK</h1>
+      }@else if (condition == 'sexy') {
+      <h2>Sexy</h2>
+      }@else if (condition == 'various') {
+      <h3>various</h3>
+      }@else if (condition == 'color') {
+      <h4>Color</h4>
+      }@else {
+      <h5>Another text</h5>
+      }
+    </div>
+  </div>
+</div>

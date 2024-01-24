@@ -1,0 +1,42 @@
+<div class="ordernew">
+  <div class="container">
+    <div class="ordernewcard">
+      <div class="title">{{ title }}</div>
+      <div class="areaselect">
+        <div class="leftarea">
+          @for (item of selectProducts; track $index) { @if (item.id==1) {
+          <input
+            type="radio"
+            name="select"
+            [id]="'new' + item.id"
+            checked
+            (input)="checkedType(item.id)"
+          />
+          <label [for]="'new' + item.id">
+            {{ item.textplate }}
+          </label>
+          }@else {
+          <input
+            type="radio"
+            name="select"
+            [id]="'new' + item.id"
+            (input)="checkedType(item.id)"
+          />
+          <label [for]="'new' + item.id">
+            {{ item.textplate }}
+          </label>
+          } }
+          <p class="delivery">
+            *Yetkazib berish narxi - hududiga qarab 20 000 dan 30 000 so'mgacha.
+          </p>
+        </div>
+        <div class="rightarea">
+          @for (item of selectProducts; track $index) { @if (checkeditem ==
+          'item'+item.id) {
+          <img [src]="item.image_url" alt="new" />
+          } }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

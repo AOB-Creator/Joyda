@@ -1,0 +1,75 @@
+// @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;600;700;800&display=swap");
+@use "../../styles.scss" as *;
+
+@mixin DF($ai: center, $jc: center, $fd: row) {
+  display: flex;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-direction: $fd;
+}
+
+.navbar {
+  border-bottom: 1px solid $grey-2;
+  .navigation {
+    // height: 6vh;
+    @include DF(center, space-between, row);
+    .left {
+      @include DF(center, space-between, row);
+      list-style: none;
+      li {
+        padding: 14px 10px;
+        color: #1d3448;
+        font-size: 14px;
+        user-select: none;
+        font-weight: 400;
+        cursor: pointer;
+        &.active {
+          background: linear-gradient(
+            137.02deg,
+            #018ed5 19.89%,
+            #00b2f8 97.85%
+          );
+          color: white;
+        }
+      }
+    }
+    .right {
+      @include DF(center, space-between, row);
+      .location {
+        align-items: center;
+        padding: 6px 10px;
+        font-size: 14px;
+        color: $colortext;
+        border-left: 1px solid $grey-2;
+        border-right: 1px solid $grey-2;
+        margin: 0px 3px;
+        cursor: pointer;
+      }
+      div {
+        @include DF(center, space-between, row);
+        p {
+          margin-right: 5px;
+          user-select: none;
+        }
+        #iconloca {
+          font-size: 14px;
+          color: $bluecols;
+          // height: 13px;
+          // background-color: darkblue;
+        }
+        #user {
+          font-size: 14px;
+          color: #32c89b;
+        }
+      }
+
+      .profile {
+        padding: 6px 5px;
+        font-size: 14px;
+        color: $colortext;
+        margin: 0px 3px;
+        cursor: pointer;
+      }
+    }
+  }
+}
