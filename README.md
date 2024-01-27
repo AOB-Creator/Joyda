@@ -9,7 +9,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 #Joyda Clone is being developed by Alpamis Omirbekov 
 
 
-                      ![image](https://github.com/AOB-Creator/Joyda/assets/86979151/010b7108-8f23-46fb-a70b-81c5aeb3b816)
+  ![image](https://github.com/AOB-Creator/Joyda/assets/86979151/010b7108-8f23-46fb-a70b-81c5aeb3b816)
 
 ## Code scaffolding
 
